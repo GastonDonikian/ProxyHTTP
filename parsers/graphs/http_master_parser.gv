@@ -1,0 +1,36 @@
+digraph master{
+
+    START_LINE;
+    HEADER_NEW_LINE;
+    HEADER;
+    DATA_NEW_LINE;
+    DATA;
+    FIN;
+    ERROR;
+
+    START_LINE -> HEADER_NEW_LINE [label="'\\n' \nstart_line_byte(c)"];
+    START_LINE -> START_LINE [label="ANY \nstart_line_byte(c)"];
+
+
+    HEADER_NEW_LINE -> DATA_NEW_LINE [label="'\\n' \nheader_byte(c)"];
+    HEADER_NEW_LINE -> HEADER [label="ANY \nheader_byte(c)"];
+
+
+    HEADER -> HEADER_NEW_LINE [label="'\\n' \nheader_byte(c)"];
+    HEADER -> HEADER [label="ANY \nheader_byte(c)"];
+
+
+    DATA_NEW_LINE -> FIN [label="'\\n' \ndata_byte(c)"];
+    DATA_NEW_LINE -> DATA [label="ANY \ndata_byte(c)"];
+
+
+    DATA -> DATA_NEW_LINE [label="'\\n' \ndata_byte(c)"];
+    DATA -> DATA [label="'ANY' \ndata_byte(c)"];
+
+
+    FIN -> ERROR [label="ANY \nerror()"];
+
+
+    ERROR -> ERROR [label="ANY \nerror()"];
+
+}

@@ -1,0 +1,61 @@
+digraph header_parser {
+    
+    NEW_LINE;
+    FIELD_NAME;
+    COLON;
+    FIELD_VALUE;
+    FIN;
+    ERROR;
+    CR_FIELD_NAME;
+    CR_FIELD_VALUE;
+    CR_FIN;
+    OWS;
+
+
+    NEW_LINE -> ERROR [label = "':' \nerror()"];
+	NEW_LINE -> CR_FIN [label = "'\\r' \nwait_cr()"];
+	NEW_LINE -> FIELD_NAME [label="ANY\n byte_fn()"];
+
+
+    FIELD_NAME -> COLON [label="':'\nwait_colon()"];
+	FIELD_NAME -> CR_FIELD_NAME [label="'\\r'\nwait_cr())"];
+	FIELD_NAME -> FIELD_NAME [label="'ANY'\n byte_fn()"];
+
+
+    //COLON -> ERROR [label="'\\r', ':'\nwait_fv()"];
+    COLON -> CR_FIELD_VALUE [label="'\\r' \nwait_fv"];
+    COLON -> OWS [label="' ' \nwait_fv()"];
+	COLON -> FIELD_VALUE [label ="ANY \nbyte_fv()"];
+
+
+
+	FIELD_VALUE -> CR_FIELD_VALUE [label="'\\r' \nwait_fv()"];
+	FIELD_VALUE -> FIELD_VALUE [label="ANY \nbyte_fv()"];
+
+
+    FIN -> ERROR [label="ANY \nerror()"];
+
+
+    ERROR -> ERROR [label="ANY \nerror()"];
+
+    CR_FIELD_NAME -> CR_FIELD_NAME [label="'\\r' \nbyte_cr_fn()"];
+    CR_FIELD_NAME -> NEW_LINE [label="'\\n' \nbyte_nl()"];
+    CR_FIELD_NAME -> FIELD_NAME [label ="ANY \nbyte_cr_fn()\nbyte_fv()"];
+
+
+    CR_FIELD_VALUE -> CR_FIELD_VALUE [label="'\\r' \nbyte_cr_fv"];
+    CR_FIELD_VALUE -> ERROR [label="'\\n' \nerror()"];
+    CR_FIELD_VALUE -> FIELD_VALUE [label ="ANY \nbyte_cr_fv()\nbyte_fv()"];
+
+
+    CR_FIN -> CR_FIELD_NAME [label="'\\' \nbyte_cr_fv"];
+    CR_FIN -> FIN [label="'\\n' \nfin()"];
+    CR_FIN -> FIELD_VALUE [label="ANY \nbyte_cr_fv() \nbyte_fv()"];
+
+    OWS -> CR_FIELD_VALUE [label="'\\r' \nwait_fv()"];
+    OWS -> OWS [label="' ' \nwait_fv()"];
+    OWS -> FIELD_VALUE [label="ANY \nbyte_fv()"];
+
+   
+
+}

@@ -1,0 +1,197 @@
+* 6ac0bd5 : Terminado.
+* 3c316fd : TODOS LOS CASOS DE PRUEBA FUNCIONAN, falta sacar prints
+* 321e98a : Saco warnings - falta testear
+*   0f7e673 : Merge remote-tracking branch 'origin/DoH' into DoH
+|\  
+| * dcd52b1 : Auto stash before merge of "DoH" and "origin/DoH"
+* | 072d95d : ipv6 directo
+|/  
+* 92b4297 : Sacamos algunos warnings... dejamos un par para mañana Valentino <vriera@itba.edu.ar>
+* 247edff : Commit pasando todos los casos de prueba, falta sacar warnings Co-authored-by: Valentino <vriera@itba.edu.ar >
+* abf50ed : conexion cte
+* a3a4c27 : Auto stash before merge of "DoH" and "origin/DoH"
+* 849da80 : Arreglamos tema con merge y conexiones Co-authored-by: Valentino <vriera@itba.edu.ar>
+* 409b754 : Timeout
+*   2575658 : Merge remote-tracking branch 'origin/DoH' into DoH
+|\  
+| * 7c7f0cf : Parche pasaje de param '-o'
+* | 536006b : Push para corregir cosas
+|/  
+* 8937814 : Parche para ipv4 directo
+* 4496ea1 : Entregable posta
+* 9c6db9f : Entregable
+* e78595d : menos warnings
+*   52ede76 : Merge remote-tracking branch 'origin/DoH' into DoH
+|\  
+| * 5054d35 : quedó un -3 viejo en http_parser
+| * cdbe64f : Ajustando conexión de cierre
+* | 5699d74 : Version pseudo final, falta pulir
+* | a6fbb89 : Merge branch 'DoH' of bitbucket.org:itba/pc-2021a-03 into DoH
+|\| 
+| *   131c311 : Merge remote-tracking branch 'origin/DoH' into DoH
+| |\  
+| | * 869f13a : Auto stash before merge of "DoH" and "origin/DoH"
+| * | 9a92383 : Bug fix parser
+| |/  
+| * f871832 : Arreglo error menor
+| *   fa400d8 : Merge remote-tracking branch 'origin/DoH' into DoH
+| |\  
+| | * c5ec40d : Limpieza al HTTP_parser
+| * | fde2f8b : Bug arreglado, pulido setbuffersize de mcp
+* | | e521b6a : Commit tratando de agregar IPv6, ni aparece en Wireshark, pero tengo que hacer un pull
+| |/  
+|/|   
+* | c5258c0 : Nada
+* | 18ffe63 : Terminamos merge Co-authored-by: Valentino <vriera@itba.edu.ar>
+|\| 
+| * a027bec : Listo el protocolo de comunicación! Woohoo
+| * b0867b0 : Habemus comunicación!
+* | 3f19cb1 : Commits generales sacamos bugs y sacamos bugs y agregamos funcionalidades
+* | e0f1763 : Merge branch 'DoH' of bitbucket.org:itba/pc-2021a-03 into DoH
+|\| 
+| * 2cd912e : comienzo del soporte del socket pasivo de mcp
+| *   d717dd3 : Merge branch 'monitoreo_y_configuración' into DoH
+| |\  
+| | * fd05919 : Inicio de comunicación con el proxy
+| | *   e227fbc : Merge branch 'DoH' into monitoreo_y_configuración
+| | |\  
+| | * | 25ae459 : Agrego Makefile
+| | * | 4228c92 : Cliente listo
+| | * | b4d5ee7 : mcp tiene una passphrase encodeada en SHA256 (con shaUtils)
+| | * | 61f1097 : Cliente mcp listo, falta recibirlo desde el proxy
+| | * |   47daadf : Merge branch 'DoH' into monitoreo_y_configuración
+| | |\ \  
+| | * \ \   ba37462 : Merge branch 'DoH' into dev
+| | |\ \ \  
+* | | | | | 5bb2538 : Commit con proxy 100% FUNCIONAL
+|/ / / / /  
+* | | | / db106bb : Hicimos manejo de errores y devuelve internal server error y otras cosas
+| |_|_|/  
+|/| | |   
+* | | | 94fcfcd : Terminamos el proxy, falta hacer un buffer circular para el 'Tunel' y hacer requests del DoH por IPv6
+| |_|/  
+|/| |   
+* | | 801e047 : Pequeño commit arreglando 2 bugs Co-authored-by: Valentino <vriera@itba.edu.ar>
+* | | 6b8905f : Commmite de Cambios de DoH y FD_SET y otras weas
+* | |   ee95729 : Merge branch 'DoH' of bitbucket.org:itba/pc-2021a-03 into DoH
+|\ \ \  
+| | |/  
+| |/|   
+| * | c507742 : Agregamos soporte de args
+* | | 17878e7 : Sacamos Bugs, FUNCIONAL EL PROXY,
+|/ /  
+* | 365942e : Añadidas las char classes y fix a parser de primeria linea
+* | 8ad35bc : Mergeamos testeado con parsers, esto lo hizo Valentino, creamos archivo de metricas TAD y empezamos el args.c args.h
+* | 87ad355 : fix importante en el parser
+* |   ce8403b : Merge remote-tracking branch 'origin/DoH' into DoH
+|\ \  
+| * | 8707d61 : Merge de las dos branches funcionando!
+* | | be2b82e : Merge remote-tracking branch 'origin/DoH' into DoH
+|\| | 
+| * |   966d0a8 : Merge sin testear con el Parser
+| |\ \  
+| | * | 30a9e39 : Sin querer borre algo en el editor de texto...
+| | * | 8754c97 : Fin del parser de URI
+| | * |   588db37 : Merge remote-tracking branch 'origin/request_targer_parser' into request_targer_parser
+| | |\ \  
+| | | * | e88dbcf : Lógica (tentativa) de manejo del URI
+| | * | | d438526 : Absolute URI parser
+| | |/ /  
+| | * | d494e9d : Maquina de estados Request URI parser
+| | * | df37554 : maquina de estados Start line parser lista
+| * | | 288071b : COMMIT ANTES DE CAOS TOTAL DE MERGE 5:03 AM
+| * | |   433ffb4 : Merge branch 'DoH' of bitbucket.org:itba/pc-2021a-03 into DoH
+| |\ \ \  
+| * | | | d95ffa9 : Proxy ida y vuelta sin Parsers, NO MEMORY LEAKS, Valgrind sacala del angulo. Co-authored-by: <vriera@itba.edu.ar
+* | | | |   103fd16 : Merge remote-tracking branch 'origin/DoH' into DoH
+|\ \ \ \ \  
+| | |/ / /  
+| |/| | |   
+| * | | | a284b9e : Proxy ida y vuelta sin Parsers, NO MEMORY LEAKS, Valgrind sacala del angulo.
+| |/ / /  
+* / / / 7c2fd98 : Proxy ida y vuelta sin Parsers, NO MEMORY LEAKS, Valgrind sacala del angulo.
+|/ / /  
+* | |   d6d9a9e : Merge branch 'DoH' of bitbucket.org:itba/pc-2021a-03 into DoH
+|\ \ \  
+| * | | 24e32e9 : Desde leer la request hasta conectarte al server no bloqueante listo
+* | | | a41a7aa : Commit para pullear lo de valchar
+|/ / /  
+* | | 2da0d79 : Hicimos no bloquenate el doh, y hicimos estructuras grales Co-authored-by: Valchar <vriera@itba.edu.ar>
+* | | 71862c4 : Creación de la estructura HTTP_connection
+* | | a7308ff : Agregue free de doh y saque un par de hardcodeadas
+* | | c1cdf1d : Terminamos DoH, faltan TODO's Co-Authored-By: Valentino Riera Torraca <vriera@itba.edu.ar>
+* | | df4f2b0 : intentando arreglar un seg fault
+* | | ce538d7 : Fix al proxyUtils.h
+* | | ebd394d : Se logró atender un usuario y obtener el host pedido
+|/ /  
+* | 1d4ea99 : HTTP lleva inits ahora
+* | 712c567 : Actualizo .gv de header_parser
+* |   e55c6ca : Merge remote-tracking branch 'origin/DoH' into DoH
+|\ \  
+| * | 0ef925e : HTTP_parser adaptando al exterior
+* | | 9860af6 : Refator de archivos + HTTP_parser exterior friendly
+|/ /  
+* | b16141c : Terminamos DoH, no testeado con todo el proxy pero si la estructura Co-authored-by: Valentino Riera Torraca <vriera@itba.edu.ar>
+* | 4b2c9b4 : DoH, NO FUNCIONAL, antes de intentar cambiarlo a algo mas facil que lo que devolvia getaddrinfo.
+* | 3d3f695 : Sacamos el body del mensaje HTTP y validamos con el Content-Length Co-Authored-By: Valentino Riera Torraca <vriera@itba.edu.ar>
+* |   fce14b6 : Commit antes de pull
+|\ \  
+| * | b9706eb : Preparando para unir parser con Doh
+* | | ce761ca : Commit antes de pull
+|/ /  
+* |   64d96aa : Merge branch 'Parser' into DoH
+|\ \  
+| * | b3a9548 : Soporte para multiheader parsing , estructura para mensaje HTTP
+| * | 6c10f64 : Adapto stripmime a usar BufferUtils
+| * | f8f7790 : Faltar aplicar al buffer de anita
+| * |   3967969 : Auto stash before merge of "Parser" and "origin/Parser"
+| |\ \  
+| * | | 7a35021 : BufferUtils primera version
+| * | | 81d5904 : Agrego automata master_parser + arreglo error en header parser (.dots)
+| * | | 88016d1 : .dot para graficar HTML header parser
+| * | | d57f78c : Parser_old con busqueda de host (viejo)
+| * | | bddf1d4 : Correccion estructura del estado New Line
+| * | |   5b0ce69 : Funcion de header en parser_old
+| |\ \ \  
+| | |/ /  
+| |/| |   
+| | * | 3e4134c : Parser al estilo guia 8
+| * | | 7319135 : ParseRequestHeader en parser.c
+| |/ /  
+| * | 1644e4d : Creando una base
+* | | d3b89cc : Antes de cambiar de branch
+* | | 3553244 : Doh con POST funcional
+* | |   e0d0bee : RETRIEVE 100% FUNCIONAL DEL DoH
+|\ \ \  
+| * | | 0375010 : Arreglo un errorcin
+| * | | 0582011 : Cambios menores
+| * | | 1a7d64b : Auto stash before merge of "DoH" and "origin/DoH"
+* | | | f037411 : Commiteo porque funciona la ida, falta la vuelta bob esponja
+|/ / /  
+* | | c8d18d1 : Seccion de ida, pre testeo
+* | | 4305ed1 : Commiteo el doh, pasandonos al metodo POST
+* | | 02f558a : Anda, pero recibo una respuesta vacía del DoH
+* | | 5640157 : (Me olvidé de guardar)
+* | | 20331db : Cambio el approach
+* | | 2bb922d : Creamos el doh.c, falta des-hardcodear la respuesta y decodificar la vuelta
+* | | 739d5bc : Merge branch 'tcp_proxy' into DoH
+|\| | 
+| |/  
+|/|   
+| * 98d30b5 : Arreglo errores
+| * d12dfe6 : Manejo de errores menor
+| *   07f94cb : Merge remote-tracking branch 'origin/tcp_proxy' into tcp_proxy
+| |\  
+| | *   b681128 : Merge branch 'master' into tcp_proxy
+| | |\  
+| | | * f400a4a : Logger.c y logger.h para mejor manejo de logs
+| |_|/  
+|/| |   
+| * | 43b09d2 : Funciona el select sin espera activa
+| |/  
+| * f54ef1e : Paso utils a otro archivo
+| * df37aef : Modularizo y emprolijo
+| * 8b1a305 : Proxy tcp funcionando: ya no hace echo
+| * dede395 : Cliente tcp que hace echo a los clientes
+|/  
+* f22e33c : Initial commit
